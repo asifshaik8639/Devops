@@ -1,0 +1,25 @@
+---
+
+
+
+- name: copy checkforprocess shell script
+  copy: 
+    src: checkforprocess.sh
+    dest: "{{application_dir}}"
+
+- name: check if process is running
+  shell: cd {{application_dir}} && ./checkforprocess.sh
+  register: processcheck
+
+- debug: var=processcheck
+
+- name: skip if process is running
+  include: deploy.yml
+  when: processcheck.stdout == 'not running'
+
+
+
+
+
+
+

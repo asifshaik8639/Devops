@@ -1,0 +1,22 @@
+This is a test file in test-dir
+:
+react
+angular
+remix
+devops
+full stack developer
+mongodb
+nodejs
+cosmosdb
+adobe flex
+typescript
+react thunk
+rxjs
+observables
+aws
+azure devops
+gcp
+nginx
+note down all the points specified by Tanay Pratap
+:wq
+

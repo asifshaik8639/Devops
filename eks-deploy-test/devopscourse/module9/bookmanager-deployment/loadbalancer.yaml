@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookmanager-loadbalancer
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-security-groups: "sg-0017f0ec002236b20"
+spec:
+  type: LoadBalancer
+  selector:
+    app: bookmanager
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
